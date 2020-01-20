@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
   title="Ürün Listesi"
+  filterText = ""
   products : Product[] = [
     {id:1, name:"Laptop", price:2500, categoryId:1, description:"Asus Zenbook",imageUrl:"https://via.placeholder.com/150x150/"}, 
     {id:2, name:"Mouse", price:25, categoryId:2, description:"A4 Tech",imageUrl:"https://via.placeholder.com/150x150/"},
