@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'; //ngModel for import FormsModule
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,8 @@ import { AlertifyService } from './services/alertify.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //ngModel for import FormsModule
+    FormsModule, //ngModel for import FormsModule
+    HttpClientModule
   ],
   providers: [AlertifyService], //Global Service
   bootstrap: [AppComponent]
