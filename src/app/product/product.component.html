@@ -1,7 +1,7 @@
-<div class="row mr-5 ml-5">
+<!-- <div class="row mr-5 ml-5">
     <h3 *ngIf="products; else noProduct ">{{title}}</h3>
-</div>
-
+</div> -->
+<app-category></app-category>
 <div class="form-group">
     <!--Two-way-Binding-->
     <input class="form-control" id="productName" placeholder="Arama ifadenizi giriniz." [(ngModel)]="filterText">
@@ -19,7 +19,7 @@
     </ng-template>
     
     <!--CustomPiper Add Value-->
-    <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem;">
+    <div *ngFor="let product of products | productFilter:filterText" class="productbox" style="width: 18rem;">
         <img [src]="product.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name | uppercase}} - {{product.price | currency:'TRY':true:"1.2-2"}}</h5>
